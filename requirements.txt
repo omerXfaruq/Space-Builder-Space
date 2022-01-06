@@ -1,0 +1,5 @@
+gradio
+numpy
+requests
+typing
+huggingface_hub == 0.2.1
