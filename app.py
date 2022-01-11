@@ -28,7 +28,7 @@ class SpaceBuilder:
         filtered_list = []
         for name in name_list:
             if not (name == "" or name.isspace()):
-                filtered_list.append(f"spaces/{name}")
+                filtered_list.append(name)
         return filtered_list
 
     @classmethod
@@ -226,9 +226,9 @@ if __name__ == "__main__":
             gr.inputs.Textbox(
                 lines=4,
                 placeholder=(
-                    f"Drop space links at each line and I will create a new space comparing them. ie:"
-                    f"\ndeepklarity/poster2plot"
-                    f"\ndeepklarity/poster2plot"
+                    f"Drop model and space links at each line and I will create a new space comparing them. Usage examples:"
+                    f"\nspaces/deepklarity/poster2plot"
+                    f"\nmodels/gpt2"
                 ),
             ),
             gr.inputs.Textbox(lines=1, placeholder="HuggingFace Write Token"),
@@ -237,7 +237,7 @@ if __name__ == "__main__":
             gr.inputs.Textbox(lines=1, placeholder="Description for the target space interface, ie. Description"),
         ],
         title="Space that builds another Space",
-        description="I can create another space which will compare the spaces you provide to me",
+        description="I can create another space which will compare the models or spaces you provide to me",
         outputs="text",
     )
     iface.launch()

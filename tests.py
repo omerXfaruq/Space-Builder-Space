@@ -6,14 +6,14 @@ class TestUnit:
     class TestSpaceBuilder:
         def test_split_space_names(self):
             input = (
-                f"nielsr/LayoutLMv2-FUNSD"
-                f"\nvalhalla/glide-text2im"
+                f"spaces/nielsr/LayoutLMv2-FUNSD"
+                f"\nspaces/valhalla/glide-text2im"
                 f"\n"
                 f"\n    "
                 f"\n   "
-                f"\nvalhalla/glide-text2im"
+                f"\nspaces/valhalla/glide-text2im"
                 f"\n  "
-                f"\nvalhalla/glide-text2im"
+                f"\nspaces/valhalla/glide-text2im"
                 f"\n"
             )
             expected_output = (
@@ -28,14 +28,14 @@ class TestUnit:
 
         def test_load_and_check_spaces_1(self):
             input = (
-                f"nielsr/LayoutLMv2-FUNSD"
-                f"\nvalhalla/glide-text2im"
+                f"spaces/nielsr/LayoutLMv2-FUNSD"
+                f"\nspaces/valhalla/glide-text2im"
             )
             assert SpaceBuilder.load_and_check_spaces(names=input) is False
 
         def test_load_and_check_spaces_2(self):
             input = (
-                f"valhalla/glide-text2im"
-                f"\nvalhalla/glide-text2im"
+                f"spaces/valhalla/glide-text2im"
+                f"\nspaces/valhalla/glide-text2im"
             )
             assert SpaceBuilder.load_and_check_spaces(names=input) is True
