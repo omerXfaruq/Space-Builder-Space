@@ -1,6 +1,6 @@
 # Space-Builder-Space
 
-A Space that builds multiple spaces or models in hugging face.
+A Space that builds a new space comparing multiple models in hugging face.
 
 Hosted [here](https://huggingface.co/spaces/farukozderim/space-builder-space)
 
